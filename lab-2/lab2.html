@@ -15,9 +15,10 @@
 		<h3>website {{person.website}}</h3>
 		<h3>company {{person.company.name}}</h3>
 		<button @click="isthisgood">ดีไม่ดี</button>
+		<h2>{{yesno.answer}}</h2>
 		users
 		<h2 v-for="u in users":data-id ="u.id" @click="viewbio(u)">
-		<img src="'https://picsum.photos/id/${u.id}/200/300'" att="">
+		<img src="https://picsum.photos/id/300/200/300" att="">
 		{{u.username}}
 	</h2>
 	</div>
@@ -28,7 +29,8 @@
 		.then(response => response.json())
 		.then(json => {
 			console.log(json)
-			app.yesno = json})
+			app.users = json
+			app.person = json[0]})
 		let app = new Vue({
 			el: '#app',
 			methods: {
@@ -40,8 +42,7 @@
 					.then(response => response.json())
 					.then(json => {
 					console.log(json)
-					app.users = json
-					app.person = json[0]})
+					app.yesno = json})
 				}
 			},
 			data: {
@@ -51,25 +52,13 @@
 					"image":""
 					},
 				person :{id:61070015,
-					name:"kittipoom chooamorn",
-					username:"kittipoom777",
-					email:'61070015@it.kmitl.ac.th',
-					website:"reg.kmitl.ac.th",
+					name:"",
+					username:"",
+					email:'',
+					website:"",
 					company:{
-						name : 'larkabrang'}
+						name : ''}
 						
-				,users:[
-				{
-					id:61070015,
-					name:"kittipoom chooamorn",
-					username:"kittipoom777",
-					email:'61070015@it.kmitl.ac.th',
-					website:"reg.kmitl.ac.th",
-					company:{
-						name : 'larkabrang'
-					}
-				}	
-				]
 				}
 			}
 		})
