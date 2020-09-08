@@ -48,7 +48,6 @@ main{
 div.box{
 	width: var(--boxsize);
 	height: var(--boxsize);
-	background-color: orange;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -57,29 +56,34 @@ div.box{
 .btn{
 	width: 100%;
 	height: 100%;
-	background-color: #0008;
+	background-color: #1010;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
 }
 #endgame{
-	background-color: #333;
+	background-color: #444;
 }
-.box._toggle{
-	background-color: yellow;
+.box._origin{
+	background-color: black;
+}
+.box._toggle[data-isrightarrow="1"]{
+	background-image: url('re.png');
+	background-size: 100%;
 	transition: none;
-	opacity: .5;
+	transform: rotate(270deg);
 }
 .box._toggle[data-isrightarrow="0"]{
-	background-color: red;
+	background-image: url('re.png');
+	background-size: 100%;
+	transition: none;
+	transform: rotate(180deg);
 }
-
-
 .box._12{
 	background-color: red;
 }
-.box._16{
+.box._14{
 	background-color: yellow;
 }
 .box._path{
@@ -161,7 +165,7 @@ div.box{
 	right:20%;
 	bottom:40%;
 }
-.box[data-pst="16"]{
+.box[data-pst="14"]{
 	right:0%;
 	bottom:40%;
 }
