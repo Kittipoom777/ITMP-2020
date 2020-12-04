@@ -16,4 +16,4 @@ table, th, td {
   h5{
       opacity: 0;
   }
-  input:hover + h5 { opacity: 1; }
+  div:hover + h5 { opacity: 1; }
