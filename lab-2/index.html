@@ -9,16 +9,32 @@
 <body>
 	<div id="app">
 		About
-		<h3>username {{person.username}}</h3>
-		<h3>name {{person.name}}</h3>
-		<h3>email {{person.email}}</h3>
-		<h3>website {{person.website}}</h3>
-		<h3>company {{person.company.name}}</h3>
-		<button @click="isthisgood">ดีไม่ดี</button>
+		<table class="w3-table w3-striped">
+			<tr>
+				<th>username</th>
+				<th>{{person.username}}</th>
+			</tr>
+			<tr>
+				<th>name</th>
+				<th>{{person.name}}</th>
+			</tr>
+			<tr>
+				<th>email</th>
+				<th>{{person.email}}</th>
+			</tr>
+			<tr>
+				<th>website</th>
+				<th>{{person.website}}</th>
+			</tr>
+			<tr>
+				<th>company</th>
+				<th>{{person.company.name}}</th>
+			</tr>
+		</table>
+		<button @click="isthisgood">Yeah?</button>
 		<h2>{{yesno.answer}}</h2>
-		users
 		<h2 v-for="u in users":data-id ="u.id" @click="viewbio(u)">
-		<img src="https://picsum.photos/id/300/200/300" att="">
+		<img src="https://picsum.photos/200/300" att="">
 		{{u.username}}
 	</h2>
 	</div>
@@ -49,7 +65,6 @@
 				yesno:{
 					"answer":"5",
 					"forced":false,
-					"image":" "
 					},
 				person :{id:61070015,
 					name:"",
