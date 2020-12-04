@@ -2,6 +2,8 @@ body{
 	min-height: 100vh;
 	display: flex;
 	background: black;
+	background-image: url(img/1.jpg);
+	background-size: 100%;
 }
 #canvas{
 	margin: auto;
@@ -52,3 +54,15 @@ a-dot{
 a-dot[data-pick="true"]{
 	background-color: hsl(var(--h),100%,var(--picklight));
 }
+img{
+	width: 330px;
+	height: 185px;
+	position: relative;
+	top: 300px;
+	right: 200px;
+	animation: big  1s alternate infinite ease-in;
+}
+@keyframes big {
+	0%   {transform: scale(.6);}
+	100% {transform: scale(1.2);}
+  }

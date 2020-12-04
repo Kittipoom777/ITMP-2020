@@ -13,4 +13,4 @@ table, th, td {
   h3{
     color: cyan;
   }
-  .button:active + table, th, td {  opacity: 0; }
+  .button:active + table, th, td {  opacity: 1; }
