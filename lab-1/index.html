@@ -1,16 +1,83 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>[61070015] - Multimedia Programming 2563 ITKMITL</title>
+	<title>Lab - Multimedia Programming 2563 ITKMITL</title>
 	<link rel=stylesheet href="../src/reset.css">
 	<link rel=stylesheet href="lab.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-<body>
+<body class="paper">
 	<div id="app">
-		
+		<input type="number" v-model="n">
+		<div class="space"></div>
+		<table class="w3-table w3-striped">
+			<tr>
+				<th>สูตรคูณเเม่ {{n}}</th>
+			</tr>
+			<tr>
+				<th>calulation</th>
+				<th>result</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 1</th>
+				<th>{{n*1}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 2</th>
+				<th>{{n*2}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 3</th>
+				<th>{{n*3}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 4</th>
+				<th>{{n*4}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 5</th>
+				<th>{{n*5}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 6</th>
+				<th>{{n*6}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 7</th>
+				<th>{{n*7}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 8</th>
+				<th>{{n*8}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 9</th>
+				<th>{{n*9}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 10</th>
+				<th>{{n*10}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 11</th>
+				<th>{{n*11}}</th>
+			</tr>
+			<tr>
+				<th>{{n}} x 12</th>
+				<th>{{n*12}}</th>
+			</tr>
+	</table>
 	</div>
-
-	<script src="index.js"></script>
+	<h5>
+		<img src="img/1.gif" alt="">
+	</h5>
+	<script>
+		let app = new Vue({
+			el: '#app',
+			data: {
+				n: 2
+			}
+		})
+	</script>
 </body>
 </html>
