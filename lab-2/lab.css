@@ -4,8 +4,13 @@ body{
     background-size: 100%;
 }
 table, th, td {
-    border: 1px solid red;
-    color: red;
-    background-color: orange;
-    opacity: 0.8;
+    border-style: dotted;
+    border-color: crimson;
+    color:cyan;
+    background-color: blueviolet;
+    opacity: 1;
   }
+  h3{
+    color: cyan;
+  }
+  .button:active + table, th, td {  opacity: 0; }

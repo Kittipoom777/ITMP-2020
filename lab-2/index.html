@@ -8,8 +8,12 @@
 </head>
 <body>
 	<div id="app">
-		About
+		<h3>About</h3>
 		<table class="w3-table w3-striped">
+			<tr>
+				<th>id</th>
+				<th>{{person.id}}</th>
+			</tr>
 			<tr>
 				<th>username</th>
 				<th>{{person.username}}</th>
@@ -33,10 +37,36 @@
 		</table>
 		<button @click="isthisgood">Yeah?</button>
 		<h2>{{yesno.answer}}</h2>
-		<h2 v-for="u in users":data-id ="u.id" @click="viewbio(u)">
+	<h3 v-for="u in users":data-id ="u.id" @click="viewbio(u)">
 		<img src="https://picsum.photos/200/300" att="">
-		{{u.username}}
-	</h2>
+		<table class="w3-table w3-striped">
+			<tr>
+				<th>id</th>
+				<th>{{u.id}}</th>
+			</tr>
+			<tr>
+				<th>username</th>
+				<th>{{u.username}}</th>
+			</tr>
+			<tr>
+				<th>name</th>
+				<th>{{u.name}}</th>
+			</tr>
+			<tr>
+				<th>email</th>
+				<th>{{u.email}}</th>
+			</tr>
+			<tr>
+				<th>website</th>
+				<th>{{u.website}}</th>
+			</tr>
+			<tr>
+				<th>company</th>
+				<th>{{u.company.name}}</th>
+			</tr>
+		</table>
+	</h3>
+	</h3>
 	</div>
 	
 
